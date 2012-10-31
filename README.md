@@ -88,14 +88,15 @@ Using the example from above, you would call `Kicksend.mailcheck.run` instead.
 
 ```html
 <script>
-Kicksend.mailcheck.run({
+var hasSuggestion = Kicksend.mailcheck.run({
+  email: "test-email@ggmail.com",
   domains: domains,                       // optional
   topLevelDomains: topLevelDomains,       // optional
   distanceFunction: superStringDistance,  // optional
-  suggested: function(suggestion) {
+  suggested: function(suggestion) {       // optional
     // callback code
   },
-  empty: function() {
+  empty: function() {                     //optional
     // callback code
   }
 });
