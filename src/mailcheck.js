@@ -32,14 +32,14 @@ var Kicksend = {
         if (opts.suggested) {
           return opts.suggested(result);
         } else {
-          return results;
-		    }
+          return result;
+        }
       } else {
         if (opts.empty) {
           return opts.empty();
         } else {
           return false;
-		    }
+        }
       }
     },
 
