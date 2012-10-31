@@ -30,12 +30,16 @@ var Kicksend = {
 
       if (result) {
         if (opts.suggested) {
-          opts.suggested(result);
-        }
+          return opts.suggested(result);
+        } else {
+          return results;
+		    }
       } else {
         if (opts.empty) {
-          opts.empty();
-        }
+          return opts.empty();
+        } else {
+          return false;
+		    }
       }
     },
 
